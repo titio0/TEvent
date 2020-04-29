@@ -1,6 +1,8 @@
 <?php
+
 //해당 플러그인 (TEvent)은 Fabrik-EULA에 의해 보호됩니다.//Fabrik-EULA : https://github.com/Flug-in-Fabrik/Fabrik-EULAnamespace TEvent;
 
+namespace TEvent;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
@@ -24,12 +26,14 @@ class TEvent extends PluginBase implements Listener {
            $sender->sendMessage ( $tag . "당신은 권한이 없습니다. " );
            return true;
                 }
-                elseif (isset($args[0]) {
+                elseif (isset($args[0])) {
                   foreach ($this->getServer()->getOnlinePlayers() as $player) {
                      $player->addTitle("§6§l[§f!§6]§r§f " . $args[0]);}
+                     
                 }
                 else {
                   $sender->sendMessage ( $tag . "/이벤트공지 [할말]" );
+                  return true;
                 }
               }
             }
