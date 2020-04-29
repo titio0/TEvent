@@ -29,7 +29,7 @@ class TEvent extends PluginBase implements Listener {
                 elseif (isset($args[0])) {
                   foreach ($this->getServer()->getOnlinePlayers() as $player) {
                      $player->addTitle("§6§l[§f!§6]§r§f " . $args[0]);}
-                     
+                     return true;
                 }
                 else {
                   $sender->sendMessage ( $tag . "/이벤트공지 [할말]" );
